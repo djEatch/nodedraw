@@ -1,11 +1,13 @@
 var express = require('express');
 
 var app = express();
-var server = app.listen(3000);
+var port = process.env.PORT || 3000;
+console.log(port);
+var server = app.listen(port);
 
 app.use(express.static('public'));
 
-console.log("Socket server ready!!!");
+console.log("Socket server ready!!! - port = " + port);
 
 var socket = require('socket.io');
 
@@ -24,6 +26,14 @@ function newConnection(socket){
         //io.sockets.emit('mouse',data); // used to send to ALL socket sincluding self
     }
 }
+
+
+// var http = require('http');
+// http.createServer(function(req, res) {
+//     res.writeHead(200, { 'Content-Type': 'text/plain' });
+//     res.end('Port = ' + port + '\n');
+// }).listen(port+1);
+
 
 // var http = require('http');
 // var url = require('url');
