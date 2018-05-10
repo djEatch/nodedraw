@@ -3,8 +3,7 @@ var socket;
 function setup() {
  createCanvas(200,200);
  background(51);
-
- socket = io.connect('http://nodedrawdje.azurewebsites.net:3000');
+ socket = io.connect('http://djenodedrawapp.azurewebsites.net:3000');
  socket.on('mouse', newDrawing);
 }
 
