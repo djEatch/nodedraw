@@ -1,6 +1,7 @@
 {
   "name": "websockets",
   "description": "websocket Node.js POC for Azure App Service",
+  "repository": "https://github.com/djEatch/nodedraw.git",
   "version": "1.0.0",
   "license": "ISC",
   "author": "DJEatch",
