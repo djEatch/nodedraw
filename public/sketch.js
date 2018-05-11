@@ -1,10 +1,14 @@
 var socket;
 
+
 function setup() {
  createCanvas(200,200);
  background(51);
  //socket = io.connect('localhost:3000');
+ var currentLocation = window.location.host;
+ console.log(currentLocation);
  socket = io.connect('http://djenodedrawapp.azurewebsites.net:3000');
+ socket = io.connect(currentLocation);
  socket.on('mouse', newDrawing);
 }
 
