@@ -5,7 +5,8 @@
   "license": "ISC",
   "author": "DJEatch",
     "engines": {
-        "node": ">=8.9.1"
+        "node": ">=8.9.1",
+        "npm": ">=5.0.3"
     },
   "main": "server.js",
   "scripts": {
